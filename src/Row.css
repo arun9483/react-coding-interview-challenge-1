@@ -1,0 +1,17 @@
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.row .key-container {
+  width: 100px;
+  word-break: break-all;
+  padding-right: 10px;
+}
+
+.row .value-container {
+  position: relative;
+  left: 0;
+}

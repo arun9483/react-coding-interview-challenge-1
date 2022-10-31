@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
+import Row from './Row';
 function App() {
+  const [nestedObjected] = useState({
+    taxi: 'a car licensed to transport passengers in return for payment of a fare',
+    food: {
+      sushi:
+        'a traditional Japanese dish of prepared rice accompanied by seafood and vegetables',
+      apple: {
+        HoneycrispHoneycrispHoneycrispHoneycrispHoneycrisp:
+          'an apple cultivar developed at the MAES Horticultural Research Center',
+        Fuji: 'an apple cultivar developed by growers at Tohoku Research Station',
+      },
+    },
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="react-challenge">
+      {Object.entries(nestedObjected).map((entry) => {
+        return <Row key={entry[0]} keyName={entry[0]} value={entry[1]} />;
+      })}
     </div>
   );
 }
