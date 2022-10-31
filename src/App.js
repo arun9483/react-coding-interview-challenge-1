@@ -9,7 +9,7 @@ function App() {
       sushi:
         'a traditional Japanese dish of prepared rice accompanied by seafood and vegetables',
       apple: {
-        HoneycrispHoneycrispHoneycrispHoneycrispHoneycrisp:
+        Honeycrisp:
           'an apple cultivar developed at the MAES Horticultural Research Center',
         Fuji: 'an apple cultivar developed by growers at Tohoku Research Station',
       },
